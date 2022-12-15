@@ -1,40 +1,29 @@
 import React from "react";
-import CartWidget from "./CartWidget";
+import {Link, NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div>
-    <div className="container">
-      <div className='row'>
-        <div className='col-md-12'>
-          <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                    <CartWidget/>
-                  </li>
-                </ul>
-              </div>
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <nav className="navbar navbar-expand-lg">
+                        <div className="container-fluid">
+                            <Link className="navbar-brand" to={"/"}>Mc Donalds</Link>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                            </button>
+                            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div className="navbar-nav">
+                                    <NavLink className="nav-link" activeclassname="active" to={"/"}>Inicio</NavLink>
+                                    <NavLink className="nav-link" activeclassname="active" to={"/categoria/carne"}>Carne</NavLink>
+                                    <NavLink className="nav-link" activeclassname="active" to={"/categoria/pollo"}>Pollo</NavLink>
+                                    <NavLink className="nav-link" activeclassname="active" to={"/categoria/ensalada"}>Ensaladas</NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-          </nav>
-        </div>
-      </div>
-    </div>
         </div>
     )
 }
