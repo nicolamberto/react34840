@@ -4,7 +4,8 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar';
 import CartContextProvider from './components/context/CartContext';
-import { useState } from 'react';
+import Checkout from './components/Checkout';
+
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path={"/"} element={<ItemListContainer/>} />
           <Route path={"/categoria/:categoryId"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+          <Route path={"/checkout"} element={<Checkout/>}/>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

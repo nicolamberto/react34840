@@ -21,7 +21,7 @@ const NavBar = () => {
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Componentes de PC
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul className="dropdown-menu">
                                     <NavLink className="nav-link" activeclassname="active" to={"/categoria/PLACAS DE VIDEO"}>Placas de Video</NavLink>
                                     <NavLink className="nav-link" activeclassname="active" to={"/categoria/MICROPROCESADORES"}>Microprocesadores</NavLink>
                                     <NavLink className="nav-link" activeclassname="active" to={"/categoria/MEMORIA RAM"}>Memoria RAM</NavLink>
